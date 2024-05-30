@@ -13,6 +13,10 @@ def quick_sort(arr):
             derecha.append(arr[i])
     return quick_sort(izquierda) + [pivote] + quick_sort(derecha)
 
+print(quick_sort([]))
+print(quick_sort([10]))
+print(quick_sort([2,4,1,10]))
 print(quick_sort([3,1,7,4,5,0,2,-232, 234,100, -100, 1000, -3000,-2,9,8, 52, -76, 10000]))
+
 
 
