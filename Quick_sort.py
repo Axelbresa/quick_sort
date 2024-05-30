@@ -1,5 +1,3 @@
-lista=[3,1,7,4,5,0,2,-2,9,8]
-
 def quick_sort(arr):
     if len(arr)<=1:
         return arr
@@ -13,18 +11,8 @@ def quick_sort(arr):
             izquierda.append(arr[i])
         elif pivote<arr[i]:
             derecha.append(arr[i])
-    return izquierda, pivote, derecha
+    return quick_sort(izquierda) + [pivote] + quick_sort(derecha)
 
-def repit_funcion(lista):
-    if len(lista)<2:
-        return lista
-    
-    izquierda, pivote, derecha=quick_sort(lista)
-    iz=quick_sort(izquierda) 
-    de=quick_sort(derecha) 
-    result=iz+ pivote +de
+print(quick_sort([3,1,7,4,5,0,2,-232, 234,100, -100, 1000, -3000,-2,9,8, 52, -76, 10000]))
 
-    return result
-    # + quick_sort(derecha)
 
-print(repit_funcion(lista))
